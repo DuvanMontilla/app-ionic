@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!--   <ion-button [routerLink]="['/alerts']" >Alertas</ion-button>
+  <ion-button [routerLink]="['/action-sheet']" >Accion</ion-button>
+ -->
+ 
+  <ion-list>
+    <ion-item *ngFor="let item of lista" [routerLink]="item.redirectTo" detail>
+      <ion-label>
+        <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>
+        {{item.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
