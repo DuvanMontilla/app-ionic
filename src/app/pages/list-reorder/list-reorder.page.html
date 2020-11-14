@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" text="" model="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">
+      List-Reorder
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleList()">
+        <ion-icon slot="start" name="eye"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-reorder-group #ListAnime (ionItemReorder)="doReorder($event)" disabled="false">
+
+    <ion-reorder *ngFor="let item of ListAnimes">
+      <ion-item >
+        <ion-label>{{item}}</ion-label>
+        <!--       <ion-reorder slot="end">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-reorder> -->
+      </ion-item>
+    </ion-reorder>
+
+  </ion-reorder-group>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<app-header titulo="scroll-infinite"></app-header>
+
+
+
+
+<ion-content>
+
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+    <ion-label>Awesome Label</ion-label>
+  </ion-item>
+</ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="dots"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

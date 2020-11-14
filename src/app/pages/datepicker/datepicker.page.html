@@ -1,0 +1,11 @@
+<app-header titulo="datepicker"></app-header>
+
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Fecha Nacimiento</ion-label>
+    <ion-datetime (ionChange)="changeDate($event.target.value)" [pickerOptions]="customPickerOptions" [value]="fechaActual.toISOString()" displayFormat="DD/MM/YYYY" min="1990" max="2020"></ion-datetime>
+  </ion-item>
+
+</ion-content>
