@@ -1,9 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>loading</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="loading"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <ion-button (click)="mostrarLoading()" expand="block" color="primary" shape="round">
+    Loading
+  </ion-button>
+
+  <ion-button (click)="loadingOptions()" expand="block" color="primary" shape="round">
+    LoadingOptions
+  </ion-button>
 
 </ion-content>
