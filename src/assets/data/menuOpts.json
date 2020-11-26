@@ -68,6 +68,31 @@
     "name": "Loading",
     "icon": "refresh",
     "redirectTo": "/loading"
+  },
+  {
+    "name": "Modal",
+    "icon": "browsers",
+    "redirectTo": "/modal"
+  },
+  {
+    "name": "Popover",
+    "icon": "tablet-portrait",
+    "redirectTo": "/popover"
+  },
+  {
+    "name": "Progress",
+    "icon": "code-working",
+    "redirectTo": "/progress"
+  },
+  {
+    "name": "Refresher",
+    "icon": "arrow-down-circle",
+    "redirectTo": "/refresher"
+  },
+  {
+    "name": "Search",
+    "icon": "search",
+    "redirectTo": "/search"
   }
 
 ]

@@ -1,0 +1,31 @@
+<!-- <app-header titulo="search"></app-header>
+ -->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" text=""  model="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">search</ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-searchbar 
+  placeholder="Buscar Album" 
+  type="search" 
+  (ionInput)="searchAlbums($event.target.value)" 
+  inputmode="text"
+  (debounce)="250"
+  animated
+  ></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let item of listAlbums | async">
+      <ion-label>{{item.id}} - {{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

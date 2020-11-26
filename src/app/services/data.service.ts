@@ -11,15 +11,16 @@ export class DataService {
 
   }
 
+  getMenuOpts() {
+    return this.http.get<Componente[]>('/assets/data/menuOpts.json');
+  }
 
   getUsuarios() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
-
-  getMenuOpts() {
-    return this.http.get<Componente[]>('/assets/data/menuOpts.json');
+  getAlbums() {
+    return this.http.get('https://jsonplaceholder.typicode.com/albums');
   }
-
 
 }

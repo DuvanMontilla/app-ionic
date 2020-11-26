@@ -1,0 +1,16 @@
+
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-list-header>
+        <h1>Contactos</h1>
+    </ion-list-header>
+
+    <ion-item (click)="onClick(item, i)" *ngFor="let item of ListContacts; let i = index;" detail>
+        <ion-label>{{item.name}} - {{item.phone}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

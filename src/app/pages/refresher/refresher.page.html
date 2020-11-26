@@ -1,0 +1,20 @@
+<app-header titulo="refresher"></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index" 
+    [ngClass]="animation">
+      <ion-label>
+        item - {{ i + 1}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
