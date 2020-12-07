@@ -93,6 +93,11 @@
     "name": "Search",
     "icon": "search",
     "redirectTo": "/search"
+  },
+  {
+    "name": "Segment",
+    "icon": "copy",
+    "redirectTo": "/segment"
   }
 
 ]

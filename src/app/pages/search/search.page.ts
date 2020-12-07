@@ -10,23 +10,23 @@ import { DataService } from '../../services/data.service';
 })
 export class SearchPage implements OnInit {
 
-  listAlbums: Observable<any>;
+  listAlbums: any = [];
+  textoBuscar: string = '';
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-  
-    this.listAlbums = this.dataService.getAlbums();
-    /*      .subscribe(data => {
-          this.listUsuarios = data;
-          }); */
-  
+    this.dataService.getAlbums()
+    .subscribe(data => {
+      console.log('albumnes', data);
+     this.listAlbums = data;
+ });
   }
 
-  searchAlbums(results: any) {
-    console.log('resultados', results);
+  searchAlbums(event: any) {
 
-    results = this.listAlbums;
+    this.textoBuscar = event.detail.value;
+    console.log('resultados', event.detail.value);
     
   }
 

@@ -17,15 +17,15 @@
   <ion-searchbar 
   placeholder="Buscar Album" 
   type="search" 
-  (ionInput)="searchAlbums($event.target.value)" 
+  (ionChange)="searchAlbums($event)" 
   inputmode="text"
   (debounce)="250"
   animated
   ></ion-searchbar>
 
   <ion-list>
-    <ion-item *ngFor="let item of listAlbums | async">
-      <ion-label>{{item.id}} - {{item.title}}</ion-label>
+    <ion-item *ngFor="let album of listAlbums | filtro:textoBuscar:'title'">
+      <ion-label>{{ album.title }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
